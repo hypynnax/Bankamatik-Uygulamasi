@@ -14,7 +14,7 @@ public class Rehber {
             tail = dugum;
         } else {
             tail.next = dugum;
-            dugum.prive = tail;
+            dugum.prev = tail;
             tail = dugum;
         }
     }
@@ -45,7 +45,7 @@ public class Rehber {
             while (temp.kisi.getTel() != tel) {
                 temp = temp.next;
             }
-            temp.prive.next = temp.next;
+            temp.prev.next = temp.next;
         }
     }
 

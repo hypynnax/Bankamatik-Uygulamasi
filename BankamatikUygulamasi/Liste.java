@@ -20,7 +20,7 @@ public class Liste {
             }
             if (temp.musteri.getHesapNumarasi() != dugum.musteri.getHesapNumarasi()) {
                 tail.next = dugum;
-                dugum.prive = tail;
+                dugum.prev = tail;
                 tail = dugum;
             }
         }
@@ -32,7 +32,7 @@ public class Liste {
             tail = dugum;
         } else {
             tail.next = dugum;
-            dugum.prive = tail;
+            dugum.prev = tail;
             tail = dugum;
         }
     }
@@ -45,7 +45,7 @@ public class Liste {
             tempSonrasi = tempSonrasi.next;
         }
         temp.next = tempSonrasi.next;
-        tempSonrasi.next.prive = temp;
+        tempSonrasi.next.prev = temp;
     }
 
     Dugum hesapKontrol(int hesapNumarasi) {

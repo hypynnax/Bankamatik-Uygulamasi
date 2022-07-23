@@ -5,11 +5,11 @@ public class Dugum {
     Musteri musteri = new Musteri();
 
     Dugum next;
-    Dugum prive;
+    Dugum prev;
 
     public Dugum(Musteri musteri) {
         this.musteri = musteri;
         next = null;
-        prive = null;
+        prev = null;
     }
 }
